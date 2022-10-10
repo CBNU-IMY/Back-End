@@ -1,7 +1,7 @@
-package com.example.Controller;
+package com.example.imy_server.Controller;
 
-import com.example.Domain.User;
-import com.example.Repository.UserRepository;
+import com.example.imy_server.Domain.User;
+import com.example.imy_server.Repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -55,7 +55,7 @@ public class UserController {
     //id로 회원정보 수정정
     @PutMapping("/user/{user_id}")
     public User update(@PathVariable Long user_id, @RequestParam Long user_pw, @RequestParam String user_name,
-                       @RequestParam String user_phone, @RequestParam String user_auth) {
+                       @RequestParam String user_phone) {
         Optional<User> user = userRepository.findById(user_id);
 
         //아이디를 바꾸어서는 안되니 id와 권한을 제외한 정보 변경

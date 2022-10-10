@@ -1,4 +1,4 @@
-package com.example.Domain;
+package com.example.imy_server.Domain;
 
 import lombok.Getter;
 import lombok.Setter;
