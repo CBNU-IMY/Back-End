@@ -22,7 +22,7 @@ public class UserController {
 
     // post로 사용자 추가 (회원가입)
     @PostMapping("/user")
-    public User create(User user) {
+    public User create(@RequestBody User user) {
         return userRepository.save(user);
     }
 
@@ -54,7 +54,7 @@ public class UserController {
     //회원 수정
     //id로 회원정보 수정정
     @PutMapping("/user/{user_id}")
-    public User update(@PathVariable Long user_id, @RequestParam Long user_pw, @RequestParam String user_name,
+    public User update(@PathVariable Long user_id, @RequestParam String user_pw, @RequestParam String user_name,
                        @RequestParam String user_phone) {
         Optional<User> user = userRepository.findById(user_id);
 
