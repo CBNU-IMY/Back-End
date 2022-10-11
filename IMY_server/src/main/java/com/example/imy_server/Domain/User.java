@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
@@ -11,9 +12,10 @@ import javax.persistence.Id;
 @Setter
 public class User {
 
-    @Id
-    private Long user_id;
-    private Long user_pw;
+    @Id @GeneratedValue
+    private Long user_pk;
+    private String user_id;
+    private String user_pw;
     private String user_name;
     private String user_phone;
     private String user_auth;
