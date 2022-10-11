@@ -22,7 +22,7 @@ public class UserController {
 
     // post로 사용자 추가 (회원가입)
     @PostMapping("/user")
-    public User create(User user) {
+    public User create(@RequestBody User user) {
         return userRepository.save(user);
     }
 
@@ -44,7 +44,6 @@ public class UserController {
         Optional<User> userOptional = userRepository.findById(user_id);
         return userOptional;
     }
-
     //회원삭제
     @DeleteMapping("/user")
     public void delete(@RequestParam Long user_id) {
