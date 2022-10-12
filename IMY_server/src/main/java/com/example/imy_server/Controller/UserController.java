@@ -63,9 +63,9 @@ public class UserController {
 
         //아이디를 바꾸어서는 안되니 id와 권한을 제외한 정보 변경
         User _user = user.get();
-        _user.setUserPw(user_pw);
-        _user.setUserName(user_name);
-        _user.setUserPhone(user_phone);
+        _user.setUser_pw(user_pw);
+        _user.setUser_name(user_name);
+        _user.setUser_phone(user_phone);
         return userRepository.save(_user);
 
     }

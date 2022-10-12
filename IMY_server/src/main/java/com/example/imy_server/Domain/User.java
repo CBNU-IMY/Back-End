@@ -8,26 +8,18 @@ import javax.persistence.*;
 @Entity
 @Getter
 @Setter
-@Table(name="users")
 public class User {
 
     @Id @GeneratedValue
+    private Long user_pk;
 
-    @Column(name = "user_pk")
-    private Long userPk;
+    private String user_id;
 
-    @Column(name = "user_id")
-    private String userId;
+    private String user_pw;
 
-    @Column(name = "user_pw")
-    private String userPw;
+    private String user_name;
+    private String user_phone;
 
-    @Column(name = "user_name")
-    private String userName;
+    private String user_auth;
 
-    @Column(name = "user_phone")
-    private String userPhone;
-
-    @Column(name = "user_auth")
-    private String userAuth;
 }
