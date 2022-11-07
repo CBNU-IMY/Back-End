@@ -8,7 +8,6 @@ import javax.persistence.Id;
 
 @Entity
 @Getter
-@Setter
 public class Corpus {
     @Id
     private Long corpus_id;
@@ -17,7 +16,7 @@ public class Corpus {
     private String status_keyword;
     private String physical_illness;
     private String emotion_maincategory;
-    private String emotion_subcatrgory;
+    private String emotion_subcategory;
     private String human_sentence1;
     private String system_response1;
     private String human_sentence2;
